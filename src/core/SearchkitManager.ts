@@ -25,7 +25,8 @@ export interface SearchkitOptions {
   httpHeaders?:Object,
   basicAuth?:string,
   transport?:ESTransport,
-  searchUrlPath?:string
+  searchUrlPath?:string,
+  createHistoryFunc:Function
 }
 
 export class SearchkitManager {
@@ -89,7 +90,7 @@ export class SearchkitManager {
     this.initialLoading = true
     if(this.options.useHistory) {
       this.unlistenHistory()
-      this.history = createHistory()
+      this.history = this.options.createHistoryFunc ? createHistoryFunc : createHistory()
       this.listenToHistory()
     } else {
       this.runInitialSearch()
