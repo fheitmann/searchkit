@@ -60,7 +60,9 @@
     "qs": "ssetem/qs",
     "rc-slider": "3.3.2",
     "react": "^0.14.7",
-    "react-addons-update": "^0.14.7"
+    "react-addons-update": "^0.14.7",    
+    "@types/protractor": "1.5.16",
+    "@types/selenium-webdriver": "2.44.26"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.3",
