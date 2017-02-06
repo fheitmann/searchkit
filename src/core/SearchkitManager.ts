@@ -26,7 +26,7 @@ export interface SearchkitOptions {
   basicAuth?:string,
   transport?:ESTransport,
   searchUrlPath?:string,
-  createHistoryFunc:Function
+  createHistoryFunc?:Function
 }
 
 export class SearchkitManager {
