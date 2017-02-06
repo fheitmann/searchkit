@@ -1,5 +1,9 @@
 {
   "compileOnSave": false,
+  "types": [
+    "selenium-webdriver",
+    "protractor"
+  ],  
   "compilerOptions": {
     "declaration": true,
     "module": "commonjs",
