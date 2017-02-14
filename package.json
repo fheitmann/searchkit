@@ -29,8 +29,9 @@
     "test:watch": "./node_modules/.bin/karma start karma.conf.js --auto-watch",
     "build": "./node_modules/.bin/tsc; ./node_modules/.bin/webpack; rm release/ignore.js",
     "build:watch": "./node_modules/.bin/tsc -w",
-    "prepublish": "rm -rf lib; rm -rf release; npm run-script build;",
-    "prepare": "rm -rf lib; rm -rf release; ../.bin/tsc; ../.bin/webpack; rm release/ignore.js",
+    "preinstall": "npm install autodts",
+    "postinstall": "autodts link",
+    "prepublish": "tsc && autodts generate",
     "test:e2e": "./node_modules/.bin/protractor test/e2e/conf/protractor.conf.js",
     "test:e2e-standalone": "./node_modules/.bin/protractor test/e2e/conf/protractor.standalone.conf.js",
     "test:serve": "node test/e2e/server/start.js"
@@ -63,7 +64,8 @@
     "react": "^0.14.7",
     "react-addons-update": "^0.14.7",    
     "@types/protractor": "1.5.16",
-    "@types/selenium-webdriver": "2.44.26"
+    "@types/selenium-webdriver": "2.44.26",
+    "autodts": "~0.0.4"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.3",
