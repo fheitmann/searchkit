@@ -10,10 +10,10 @@
     "target": "es5",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "outDir": "lib",
+    "outDir": "/Users/frederic/Documents/brreg/installfromgithub/node_modules/searchkit/lib",
     "sourceMap": true,
     "moduleResolution": "node",
-    "noEmitOnError": true,
+    "noEmitOnError": false,
     "jsx": "react"
   },
   "files": [
