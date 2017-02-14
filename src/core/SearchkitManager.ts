@@ -90,7 +90,7 @@ export class SearchkitManager {
     this.initialLoading = true
     if(this.options.useHistory) {
       this.unlistenHistory()
-      this.history = this.options.createHistoryFunc ? createHistoryFunc : createHistory()
+      this.history = this.options.createHistoryFunc ? this.options.createHistoryFunc : createHistory()
       this.listenToHistory()
     } else {
       this.runInitialSearch()
